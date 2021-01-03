@@ -26,10 +26,15 @@ I have some variables that need to be explained. There are two CDF variables. cd
 Test images are taken from [here](http://people.sc.fsu.edu/~jburkardt/data/pgma/pgma.html).
   
   ## Implementation Performance
+  ### Mountain
  ![Graph1](https://github.com/nuwandda/cuda-histogram-equalization/blob/main/mountain.jpg "Mountain Result") </br></br>
+ ### Apollonian
  ![Graph2](https://github.com/nuwandda/cuda-histogram-equalization/blob/main/apollonian.jpg "Apollonian Result") </br></br>
+ ### Brain
  ![Graph3](https://github.com/nuwandda/cuda-histogram-equalization/blob/main/brain.jpg "Brain Result") </br></br>
+ ### DLA
  ![Graph4](https://github.com/nuwandda/cuda-histogram-equalization/blob/main/dla.jpg "DLA Result") </br></br>
+ ### X31
  ![Graph5](https://github.com/nuwandda/cuda-histogram-equalization/blob/main/x31.jpg "X31 Result") </br></br>
  As we can see in the graphs, there is no big differences between algorithms. The biggest differences are in Apollonian and mountain images. Both scan algorithms work good. There is no winner in scan algorithms but they have their best results in different images. However, they are almost the same.
 For all images, privatization/shared memory is better than not privatization/shared memory one. Private histogram provides much less contention and serialization for accessing both private copies and the final copy.
